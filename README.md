@@ -1,6 +1,6 @@
-# flutter_third
+# flutter_login_screen
 
-A new Flutter application.
+A mobile app built using Flutter with login screen and scrollable button.
 
 ## Getting Started
 
