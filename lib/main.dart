@@ -38,79 +38,85 @@ class MyHomePage extends StatelessWidget {
         // the App.build method, and use it to set our appbar title.
         title: Text('Login Page'),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.network('https://events.flutter.dev/engage/assets/img/home/Flutter_MarketingAssets_Web__0008_ExperienceWithFriends.png?v=1614876446'),
-            Padding(padding: EdgeInsets.all(20),
-              child: TextField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blue,
+      body: SingleChildScrollView(
+        child: Center(
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.network(
+                  'https://events.flutter.dev/engage/assets/img/home/Flutter_MarketingAssets_Web__0008_ExperienceWithFriends.png?v=1614876446'),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.blue,
+                      ),
+                      borderRadius: BorderRadius.circular(50),
                     ),
-                    borderRadius: BorderRadius.circular(50),
+                    hintText: 'Enter your name here',
                   ),
-                  hintText: 'Enter your name here',
                 ),
               ),
-            ),
-            Padding(padding: EdgeInsets.all(20),
-            child: TextField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                      color: Colors.blue,
+
+              //  ),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.blue,
+                      ),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    hintText: 'Enter your password here',
                   ),
-                  borderRadius: BorderRadius.circular(50),
+                  obscureText: true,
                 ),
-                hintText: 'Enter your password here',
               ),
-              obscureText: true,
-            ),
-            ),
-           Padding(padding: EdgeInsets.all(20),
-           child: SliderButton(
-             action: () {
-               ///Do something here OnSlide
-             },
 
-             ///Put label over here
-             label: Text(
-               "Slide to continue!",
-               style: TextStyle(
-                   color: Colors.white,
-                   fontWeight: FontWeight.w200,
-                   fontSize: 20),
-                   textAlign: TextAlign.left,
-             ),
-             icon: Center(
-                 child: Icon(
-                   Icons.send_rounded,
-                   color: Colors.white,
-                   size: 30.0,
-                   semanticLabel: 'Text to announce in accessibility modes',
-                 )),
+              // ),
+              Padding(
+                  padding: EdgeInsets.all(20),
+                  child: SliderButton(
+                    action: () {
+                      ///Do something here OnSlide
+                    },
 
-             ///Change All the color and size from here.
-             width: double.infinity,
-             radius: 40,
-             buttonColor: Colors.blue,
-             backgroundColor: Colors.white,
-             highlightedColor: Colors.blue,
-             baseColor: Colors.blue,
-           )),
-          ],
+                    ///Put label over here
+                    label: Text(
+                      "Slide to continue!",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w200,
+                          fontSize: 20),
+                      textAlign: TextAlign.left,
+                    ),
+                    icon: Center(
+                        child: Icon(
+                          Icons.send_rounded,
+                          color: Colors.white,
+                          size: 30.0,
+                          semanticLabel: 'Text to announce in accessibility modes',
+                        )),
+
+                    ///Change All the color and size from here.
+                    width: double.infinity,
+                    radius: 40,
+                    buttonColor: Colors.blue,
+                    backgroundColor: Colors.white30,
+                    highlightedColor: Colors.blue,
+                    baseColor: Colors.blue,
+                  )),
+            ],
+          ),
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
-
-
-
-
